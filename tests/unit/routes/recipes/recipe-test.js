@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('route:recipes/show', {
+moduleFor('route:recipes/recipe', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
