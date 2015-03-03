@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAEA,IAAK;EACH,WAAW,ECDG,mDAAe",
+"sources": ["app.scss","../../bower_components/bourbon/dist/addons/_font-family.scss"],
 "names": [],
 "file": "app.css"
 }
