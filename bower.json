@@ -12,6 +12,7 @@
     "ember-qunit": "0.2.8",
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
-    "bourbon": "3.2.1"
+    "bourbon": "~4.2.1",
+    "neat": "~1.7.1"
   }
 }
