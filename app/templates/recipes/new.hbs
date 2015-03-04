@@ -19,28 +19,26 @@
 
   <span>Steps</span>
 
-  {{input class="ingredient-amount" placeholder="Amount" value=ingredients.amount}}
+  {{#each step in steps}}
+    {{#each ingredient in step.ingredients}}
+      {{input class="ingredient-amount" placeholder="Amount" value=ingredient.amount}}
 
-  {{view "select" content=ingredientsUnit value=ingredients.unit}}
+      {{view "select" content=ingredientsUnit value=ingredient.unit}}
 
-  {{input class="ingredients-name" placeholder="Ingredient" value=ingredients.name}}
+      {{input class="ingredients-name" placeholder="Ingredient" value=ingredient.name}}
+    {{/each}}
 
-  <button {{action "addIngredient"}}> + </button>
+    <button {{action "addIngredient"}}> + </button>
 
-  {{textarea class="directions" placeholder="Directions" value=recipe.directions}}
+    {{textarea class="directions" placeholder="Directions" value=step.directions}}
 
-  <button {{action "addStep"}}> Add another step </button>
+    <button {{action "addStep"}}> Add another step </button>
+
+  {{/each}}
 
   {{textarea class="notes" placeholder="Enter Recipe Notes" value=recipe.notes}}
 
-
   <button {{action "saveRecipe"}}> Save this Recipe </button>
-
-
-
-
-
-
 
 </form>
 

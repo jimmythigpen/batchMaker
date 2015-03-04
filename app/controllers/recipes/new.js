@@ -7,6 +7,12 @@ export default Ember.Controller.extend({
 
   recipe: {},
 
+  steps: [
+    {
+      ingredients: [{}]
+    }
+  ],
+
   actions: {
     saveRecipe: function(){
       var data = {
@@ -19,10 +25,6 @@ export default Ember.Controller.extend({
       "notes": this.get('recipe.notes'),
       "yieldNumber": this.get('recipe.yieldNumber'),
       "yieldName": this.get('recipe.yieldName'),
-
-
-
-
       "steps":[{
           "stepNumber": 1,
           "ingredients":
@@ -33,13 +35,7 @@ export default Ember.Controller.extend({
             }],
               "directions": this.get('recipe.directions'),
           }],
-
-      // "amount": this.get('ingredients.amount'),
-      // "unit": this.get('ingredients.unit'),
-      // "ingredients": this.get('ingredients.name'),
-      // "stepNumber": 1
     };
-    console.log(data.stepNumber);
     console.log(data);
     }
   }
