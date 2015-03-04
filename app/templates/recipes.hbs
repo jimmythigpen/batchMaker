@@ -1,4 +1,18 @@
 <h1>Recipes</h1>
 
-{{#link-to 'recipes.new'}}<h2>Add new</h2>{{/link-to}}
+<ul>
+{{#each recipe in model}}
+<li>
+
+<div><img {{bind-attr src=recipe.image.url}}></div>
+<div>{{recipe.name}}</div>
+
+</li>
+{{/each}}
+</ul>
+
+{{#link-to 'recipes.new'}}
+  <h2>Add new</h2>
+{{/link-to}}
+
 {{outlet}}
