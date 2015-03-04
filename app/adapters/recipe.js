@@ -7,7 +7,7 @@ export default Ember.Object.extend({
      /* jshint unused: false */
      console.log('adapter.findAll');
      return ajax("https://api.parse.com/1/classes/Recipes").then(function(response){
-       console.log(response.resuts);
+       console.log(response.results);
        return response.results.map(function(recipe) {
          recipe.id = recipe.objectId;
          delete recipe.objectId;
