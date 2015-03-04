@@ -4,7 +4,7 @@
 
   {{input class="new-author" placeholder="Author Name" value=recipe.author}}
 
-  <!-- {{view "select" content="recipe" value="recipe.type"}} -->
+  {{view "select" content=recipeType value=recipe.type}}
 
   {{input class="prep-time" placeholder="Prep Time" value=recipe.prepTime}}
 
@@ -21,7 +21,7 @@
 
   {{input class="ingredient-amount" placeholder="Amount" value=ingredients.amount}}
 
-  <!-- {{view "select" content="ingredients-unit" value="ingredients.unit"}} -->
+  {{view "select" content=ingredientsUnit value=ingredients.unit}}
 
   {{input class="ingredients-name" placeholder="Ingredient" value=ingredients.name}}
 
