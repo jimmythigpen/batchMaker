@@ -10,6 +10,7 @@ export default Ember.Object.extend({
        return response.results.map(function(recipe) {
          recipe.id = recipe.objectId;
          delete recipe.objectId;
+         console.log(recipe);
          return recipe;
        });
      });
