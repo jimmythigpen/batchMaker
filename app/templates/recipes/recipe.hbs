@@ -2,6 +2,7 @@
 
 <h3>{{log model}}</h3>
 
-{{model.name}}
+<div>{{model.name}}</div>
+<div><img {{bind-attr src=model.image.url}}></div>
 
 {{outlet}}

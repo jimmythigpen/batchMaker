@@ -4,8 +4,9 @@
 {{#each recipe in model}}
 <li>
 
-<div><img {{bind-attr src=recipe.image.url}}></div>
 <div>{{recipe.name}}</div>
+
+<a {{bind-attr href=recipe.id }} ><img {{bind-attr src=recipe.image.url}}></a>
 
 </li>
 {{/each}}

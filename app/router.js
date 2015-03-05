@@ -10,8 +10,10 @@ Router.map(function() {
 
   this.route('recipes', function() {
     this.route('new');
-    this.route('recipe', { path: ':objectId' });
+    this.route('recipe', { path: ':recipe_id' });
   });
 });
 
 export default Router;
+
+//This is the router, and we used recipe_id so the id is targeted on the recipe route. 
