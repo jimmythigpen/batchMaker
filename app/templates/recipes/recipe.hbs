@@ -1,8 +1,24 @@
-<h1>Individual recipe</h1>
-
-<h3>{{log model}}</h3>
-
-<div>{{model.name}}</div>
+<form>
+<h1>{{model.name}}</h1>
+<h3>By: {{model.author}}</h3>
 <div><img {{bind-attr src=model.image.url}}></div>
+<ul>
+  <li>recipe type: {{model.type}}</li>
+  <li>prep time: {{model.prepTime}}</li>
+  <li>cook time: {{model.cookTime}}</li>
+  <li>cook temp: {{model.cookTemp}}</li>
+</ul>
+<div>
+<span>This recipe will create {{model.yieldNumber}} {{model.yieldName}}</span>
+<button {{action "adjustYield"}}>Adjust</button>
+</div>
+
+{{#each step in model.steps}}
+{{log step}}
+{{/each}}
+
+<p>Personal Notes: {{model.notes}}</p>
+
+</form>
 
 {{outlet}}
