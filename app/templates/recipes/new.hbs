@@ -1,51 +1,46 @@
 <form>
 <div>
-  {{input class="new-recipe-name" placeholder="Recipe Name" value=recipe.name}}
+  {{input class="new-recipe-name" placeholder="Recipe Name" value=name}}
 
-  {{input class="new-author" placeholder="Author Name" value=recipe.author}}
+  {{input class="new-author" placeholder="Author Name" value=author}}
 
   {{view "select" content=recipeType value=recipe.type}}
 
-  {{input class="prep-time" placeholder="Prep Time" value=recipe.prepTime}}
+  {{input class="prep-time" placeholder="Prep Time" value=prepTime}}
 
-  {{input class="cook-time" placeholder="Cook Time" value=recipe.cookTime}}
+  {{input class="cook-time" placeholder="Cook Time" value=cookTime}}
 
-  {{input class="cook-temp" placeholder="Cook Temp" value=recipe.cookTemp}}
+  {{input class="cook-temp" placeholder="Cook Temp" value=cookTemp}}
 
-  {{input class="yield-number" placeholder="Amount" value=recipe.yieldNumber}}
+  {{input class="yield-number" placeholder="Amount" value=yieldNumber}}
 
-  {{input class="yield-name" placeholder="cookies, loaves, etc" value=recipe.yieldName}}
+  {{input class="yield-name" placeholder="cookies, loaves, etc" value=yieldName}}
 </div>
 
   <span>Steps</span>
-
-  {{#each step in steps}}
-    {{#each ingredient in step.ingredients itemController="recipes.ingredient"}}
+  {{!iterate over the steps on the controller, setting recipes.step as the controller for each}}
+  {{#each step in steps itemController="recipes.step"}}
+  {{!iterate over the ingredients on the step controller's model}}
+    {{#each ingredient in step.model.ingredients}}
 
     <div>
       {{input class="ingredient-amount" placeholder="Amount" value=ingredient.amount}}
-
       {{view "select" content=ingredientsUnit value=ingredient.unit}}
-
       {{input class="ingredients-name" placeholder="Ingredient" value=ingredient.name}}
-
       <button {{action "addIngredient"}}> + </button>
     </div>
 
     {{/each}}
-
-    {{textarea class="directions" placeholder="Directions" value=step.directions}}
-
+    {{textarea class="directions" placeholder="Directions" value=step.model.directions}}
     <button {{action "addStep"}}> Add another step </button>
 
   {{/each}}
-<div>
 
+  <div>
+    {{textarea class="notes" placeholder="Enter Recipe Notes" value=recipe.notes}}
+    <button {{action "saveRecipe"}}> Save this Recipe </button>
+  </div>
 
-  {{textarea class="notes" placeholder="Enter Recipe Notes" value=recipe.notes}}
-
-  <button {{action "saveRecipe"}}> Save this Recipe </button>
-</div>
 </form>
 
 {{outlet}}
