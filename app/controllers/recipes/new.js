@@ -27,17 +27,22 @@ export default Ember.Controller.extend({
       "yieldName": this.get('recipe.yieldName'),
       "steps":[{
           "stepNumber": 1,
-          "ingredients":
-            [{
-              "amount": this.get('ingredients.amount'),
-              "unit": this.get('ingredients.unit'),
-              "name": this.get('ingredients.name'),
-            }],
-              "directions": this.get('recipe.directions'),
+
+            "directions": this.get('recipe.directions'),
           }],
     };
     console.log(data);
-    }
-  }
+  },
+
+      addStep: function(){
+        // var ingredients = [{
+        //   "amount": this.get('ingredient.amount'),
+        //   "unit": this.get('ingredient.unit'),
+        //   "name": this.get('ingredient.name'),
+        // }];
+        // console.log(ingredients);
+        this.get('steps').addObject({ingredients: [{}]});
+  },
+}
 
 });

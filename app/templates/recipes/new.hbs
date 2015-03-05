@@ -16,19 +16,19 @@
 
   {{input class="yield-name" placeholder="cookies, loaves, etc" value=recipe.yieldName}}
 
-
   <span>Steps</span>
 
   {{#each step in steps}}
-    {{#each ingredient in step.ingredients}}
+    {{#each ingredient in step.ingredients itemController="recipes.ingredient"}}
       {{input class="ingredient-amount" placeholder="Amount" value=ingredient.amount}}
 
       {{view "select" content=ingredientsUnit value=ingredient.unit}}
 
       {{input class="ingredients-name" placeholder="Ingredient" value=ingredient.name}}
-    {{/each}}
 
-    <button {{action "addIngredient"}}> + </button>
+      <button {{action "addIngredient"}}> + </button>
+
+    {{/each}}
 
     {{textarea class="directions" placeholder="Directions" value=step.directions}}
 
