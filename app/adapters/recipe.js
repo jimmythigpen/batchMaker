@@ -12,5 +12,15 @@ export default Ember.Object.extend({
          return recipe;
        });
      });
-   }
+   },
+
+   findRecipe: function(id){
+     return ajax("https://api.parse.com/1/classes/Recipes/" + '1BKYr15qt6').then(function(response){
+      response.id = response.objectId;
+      delete response.objectId;
+      return response;
+
+  });
+},
+
 });
