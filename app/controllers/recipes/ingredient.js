@@ -4,7 +4,8 @@ export default Ember.Controller.extend({
 
   actions: {
     addIngredient: function() {
-      this.get('model.ingredients').addObject();
+      console.log(this);
+      this.get('model.ingredients').addObject({});
     },
   }
 });

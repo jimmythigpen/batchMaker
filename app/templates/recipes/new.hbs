@@ -19,7 +19,9 @@
   <span>Steps</span>
 
   {{#each step in steps}}
+
     {{#each ingredient in step.ingredients itemController="recipes.ingredient"}}
+
       {{input class="ingredient-amount" placeholder="Amount" value=ingredient.amount}}
 
       {{view "select" content=ingredientsUnit value=ingredient.unit}}
