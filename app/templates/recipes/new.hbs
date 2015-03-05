@@ -4,7 +4,7 @@
 
   {{input class="new-author" placeholder="Author Name" value=author}}
 
-  {{view "select" content=recipeType value=recipe.type}}
+  {{view "select" content=recipeType value=type prompt="Please select type of recipe"}}
 
   {{input class="prep-time" placeholder="Prep Time" value=prepTime}}
 
@@ -25,7 +25,7 @@
 
     <div>
       {{input class="ingredient-amount" placeholder="Amount" value=ingredient.amount}}
-      {{view "select" content=ingredientsUnit value=ingredient.unit}}
+      {{view "select" content=ingredientsUnit value=ingredient.unit prompt="Please select unit of measurement"}}
       {{input class="ingredients-name" placeholder="Ingredient" value=ingredient.name}}
       <button {{action "addIngredient"}}> + </button>
     </div>
@@ -37,7 +37,7 @@
   {{/each}}
 
   <div>
-    {{textarea class="notes" placeholder="Enter Recipe Notes" value=recipe.notes}}
+    {{textarea class="notes" placeholder="Enter Recipe Notes" value=notes}}
     <button {{action "saveRecipe"}}> Save this Recipe </button>
   </div>
 
