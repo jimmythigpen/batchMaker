@@ -6,7 +6,10 @@
 
 <div>{{recipe.name}}</div>
 
-<a {{bind-attr href=recipe.id }} ><img {{bind-attr src=recipe.image.url}}></a>
+{{#link-to 'recipes.recipe' recipe}}
+
+<div><img {{bind-attr src=recipe.image.url}}></div>
+{{/link-to}}
 
 </li>
 {{/each}}
