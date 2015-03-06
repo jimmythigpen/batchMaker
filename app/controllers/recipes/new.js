@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
 
   actions: {
     saveRecipe: function(){
-      var data = this.getProperties('name', "author", "type", "prepTime", "cookTime", "cookTemp", "notes", "yieldNumber", "yieldName", "steps");
+      var data = this.getProperties('image', 'name', "author", "type", "prepTime", "cookTime", "cookTemp", "notes", "yieldNumber", "yieldName", "steps");
       var _this = this;
       console.log(JSON.stringify(data));
       Ember.$.ajax({
