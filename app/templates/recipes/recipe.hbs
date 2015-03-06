@@ -9,21 +9,22 @@
   <li>cook temp: {{model.cookTemp}}</li>
 </ul>
 <div>
+<span>The incredible Scale Multiplier{{input value=scaleMult}}</span>
 <span>This recipe will create {{model.yieldNumber}} {{model.yieldName}}</span>
 <button {{action "adjustYield"}}>Adjust</button>
 </div>
 
 <h3>Directions</h3>
-{{#each steps in model.steps}}
+{{#each step in model.steps}}
 
-<div><p>{{steps.directions}}</p></div>
+<div><p>{{step.directions}}</p></div>
 
 <div>
-{{#each ing in steps.ingredients}}
+{{#each ing in step.ingredients itemController="recipes.ingredient"}}
 <ul>
-<li>{{ing.amount}}</li>
-<li>{{ing.unit}}</li>
-<li>{{ing.name}}</li>
+<li>{{ing.scaledAmount}}</li>
+<li>{{ing.model.unit}}</li>
+<li>{{ing.model.name}}</li>
 </ul>
 {{/each}}
 </div>
