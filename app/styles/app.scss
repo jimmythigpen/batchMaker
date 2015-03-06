@@ -1,6 +1,27 @@
-@import "bower_components/bourbon/app/assets/stylesheets/bourbon";
-@import "bower_components/neat/app/assets/stylesheets/neat";
+@import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import 'bower_components/neat/app/assets/stylesheets/neat';
 
 body {
-  font-family: $lucida-grande;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  background-color: none;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.myrecipeslink {
+  color: #7d9631;
+  font-size: 4em;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
 }
