@@ -13,9 +13,20 @@
 <button {{action "adjustYield"}}>Adjust</button>
 </div>
 
-{{#each steps in model.steps itemController="recipe"}}
+<h3>Directions</h3>
+{{#each steps in model.steps}}
 
-{{log steps}}
+<div><p>{{steps.directions}}</p></div>
+
+<div>
+{{#each ing in steps.ingredients}}
+<ul>
+<li>{{ing.amount}}</li>
+<li>{{ing.unit}}</li>
+<li>{{ing.name}}</li>
+</ul>
+{{/each}}
+</div>
 
 {{/each}}
 
