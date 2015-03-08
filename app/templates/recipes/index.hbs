@@ -1,10 +1,10 @@
 <h1>Recipes</h1>
 
-<ul>
+<ul class="recipe-listing-container">
 {{#each recipe in model}}
-<li>
+<li class="recipe-listing">
 
-<div>{{recipe.name}}</div>
+<h3>{{recipe.name}}</h3>
 
 {{#link-to 'recipes.recipe' recipe}}
 <div><img {{bind-attr src=recipe.image}}></div>
@@ -15,7 +15,7 @@
 </ul>
 
 {{#link-to 'recipes.new'}}
-  <h2>Add new</h2>
+  <span class="new-button">+</span>
 {{/link-to}}
 
 {{outlet}}
