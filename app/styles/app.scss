@@ -1,8 +1,9 @@
 @import 'bower_components/bourbon/app/assets/stylesheets/bourbon';
+$gutter: em(10px);
 @import 'bower_components/neat/app/assets/stylesheets/neat';
 
 body {
-  background-color: none;
+  background-color: #F2EEE5;
   text-align: center;
   text-decoration: none;
   font-family: 'Oswald', sans-serif;
@@ -15,6 +16,36 @@ h1 {
 
 ul {
   list-style-type: none;
+}
+
+.recipe-listing-container {
+  @include outer-container(1000px);
+  padding: 0;
+}
+
+.recipe-listing {
+  @include span-columns(4);
+  @include omega(3n);
+  position: relative;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  height: 100%;
+
+}
+
+.recipe-listing img {
+  width: 100%;
+  border-radius: 5px;
+
+}
+
+.new-button {
+  position: fixed;
+  font-size: 100px;
+  right: 50px;
+  bottom: 0;
 }
 
 a {
