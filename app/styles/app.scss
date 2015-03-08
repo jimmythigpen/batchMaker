@@ -61,3 +61,75 @@ a {
 .logo {
   height: 5em;
 }
+
+input,
+textarea,
+select,
+button {
+  outline: #7d9631;
+  font-size: 1.3em;
+  margin: 5px;
+}
+
+button {
+  background-color: #7d9631;
+  color: #f2efe5;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: ridge;
+}
+
+.column1,
+.column2 {
+  width: 26.5%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  right: -38px;
+}
+
+.column1 {
+  text-align: center;
+}
+
+.column2 {
+  text-align: left;
+}
+
+.column3 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  right: -38px;
+}
+
+.notes {
+  width: 75%;
+  height: 150px;
+}
+
+::-webkit-input-placeholder {
+  color: #7d9631;
+}
+
+:-moz-placeholder {
+  opacity: 2;
+  color: #7d9631;
+}
+
+::-moz-placeholder {
+  opacity: 2;
+  color: #7d9631;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #7d9631;
+}
+
+.steps-title {
+  position: relative;
+  right: -96px;
+}
