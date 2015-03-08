@@ -4,9 +4,25 @@ $gutter: em(10px);
 
 body {
   background-color: #F2EEE5;
+  margin: 55px;
   text-align: center;
   text-decoration: none;
   font-family: 'Oswald', sans-serif;
+}
+
+.add-ing-button {
+  margin: 0;
+  font-size: 25px;
+  vertical-align: top;
+}
+
+.ingredients-name {
+  margin: 0;
+}
+
+.form-container {
+  width: 600px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -41,11 +57,12 @@ ul {
 
 }
 
-.new-button {
+.fa.fa-plus-circle {
   position: fixed;
-  font-size: 100px;
-  right: 50px;
+  font-size: 50px;
+  right: 5px;
   bottom: 0;
+  color: #7C9431;
 }
 
 a {
@@ -87,33 +104,27 @@ button {
 
 .column1,
 .column2 {
-  width: 26.5%;
+  width: 49%;
   display: inline-block;
   vertical-align: top;
-  position: relative;
-  right: -38px;
-}
-
-.column1 {
   text-align: center;
+  /* position: relative; */
+/* right: -38px; */
 }
 
-.column2 {
-  text-align: left;
-}
 
 .column3 {
   display: block;
-  width: 100%;
-  text-align: center;
-  position: relative;
+
+  /* text-align: center; */
+  /* position: relative; */
   right: -38px;
 }
 
 .notes {
   padding: 8px;
-  width: 50%;
   height: 150px;
+  width: 84%;
 }
 
 ::-webkit-input-placeholder {
@@ -132,9 +143,4 @@ button {
 
 :-ms-input-placeholder { /* Internet Explorer 10+ */
   color: #7d9631;
-}
-
-.steps-title {
-  position: relative;
-  right: -96px;
 }

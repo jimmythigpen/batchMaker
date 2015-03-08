@@ -1,7 +1,7 @@
-<form>
+<form class="form-container">
 <div class="column1">
   <div>
-    <span class="recipe-info-title">RECIPE INFO</span>
+    <span class="recipe-title">RECIPE INFO</span>
   </div>
 <div>
   {{input class="new-recipe-image" placeholder="Enter Image URL" value=model.image}}
@@ -34,7 +34,7 @@
 
 <div class="column2">
 <div>
-  <span class="steps-title">STEPS</span>
+  <span class="recipe-title">STEPS</span>
 </div>
   {{!iterate over the steps on the controller, setting recipes.step as the controller for each}}
   {{#each step in model.steps itemController="recipes.step"}}
@@ -48,7 +48,7 @@
       </div>
       <div>
         {{input class="ingredients-name" placeholder="Ingredient" value=ingredient.name}}
-        <button {{action "addIngredient"}}> + </button>
+        <button class="add-ing-button" {{action "addIngredient"}}> + </button>
       </div>
     </div>
 
