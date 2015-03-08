@@ -67,8 +67,12 @@ textarea,
 select,
 button {
   outline: #7d9631;
-  font-size: 1.3em;
+  font-size: 1em;
   margin: 5px;
+}
+
+input {
+  padding: 8px;
 }
 
 button {
@@ -107,7 +111,8 @@ button {
 }
 
 .notes {
-  width: 75%;
+  padding: 8px;
+  width: 50%;
   height: 150px;
 }
 
