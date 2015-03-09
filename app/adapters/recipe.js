@@ -3,7 +3,6 @@ import Ember from 'ember';
 
 export default Ember.Object.extend({
   find: function(name, id){
-    console.log('find adapter is running');
     return ajax("https://api.parse.com/1/classes/Recipes/" + id).then(function(recipe){
       recipe.id = recipe.objectId;
       delete recipe.objectId;
@@ -12,7 +11,6 @@ export default Ember.Object.extend({
 },
 
   findAll: function() {
-    console.log('findAll adapter is running');
      return ajax("https://api.parse.com/1/classes/Recipes").then(function(response){
        return response.results.map(function(recipe) {
          recipe.id = recipe.objectId;
