@@ -1,41 +1,41 @@
 <form>
 <h1>{{model.name}}</h1>
 <h3>By: {{model.author}}</h3>
-<div><img {{bind-attr src=model.image}}></div>
+<div><img class="recipe-image"{{bind-attr src=model.image}}></div>
 <ul>
-  <li>recipe type: {{model.type}}</li>
-  <li>prep time: {{model.prepTime}}</li>
-  <li>cook time: {{model.cookTime}}</li>
-  <li>cook temp: {{model.cookTemp}}</li>
+  <li class="recipe-info-list-items"><div>Recipe Type</div><h2 class="recipe-info-headers">{{model.type}}</h2></li>
+  <li class="recipe-info-list-items"><div>Prep Time</div><h2 class="recipe-info-headers">{{model.prepTime}}</h2></li>
+  <li class="recipe-info-list-items"><div>Cook Time</div><h2 class="recipe-info-headers">{{model.cookTime}}</h2></li>
+  <li class="recipe-info-list-items"><div>Cook Temp</div><h2 class="recipe-info-headers">{{model.cookTemp}}</h2></li>
 </ul>
 <div>
-<span>The incredible Scale Multiplier{{input value=scaleMult}}</span>
-<span>This recipe will create {{model.yieldNumber}} {{model.yieldName}}</span>
+<span>This recipe will create{{input value=scaleMult class="scale-mult"}} serving of {{model.yieldNumber}} {{model.yieldName}}</span>
 <button {{action "adjustYield"}}>Adjust</button>
 </div>
 
-<h3>Directions</h3>
+<h3>Steps</h3>
 {{#each step in model.steps}}
+<div class="step-container">
 
-<div><p>{{step.directions}}</p></div>
+<div class="step-directions"><p>{{step.directions}}</p></div>
 
-<div>
+<div class="step-ing">
 {{#each ing in step.ingredients itemController="recipes.ingredient"}}
 <ul>
-<li>{{ing.scaledAmount}}</li>
-<li>{{ing.model.unit}}</li>
-<li>{{ing.model.name}}</li>
+<li class="recipe-step-list">{{ing.scaledAmount}}</li>
+<li class="recipe-step-list">{{ing.model.unit}}</li>
+<li class="recipe-step-list">{{ing.model.name}}</li>
 </ul>
 {{/each}}
 </div>
-
+</div>
 {{/each}}
 
-<p>Personal Notes: {{model.notes}}</p>
+<p class="recipe-notes"><h3>Personal Notes</h3>{{model.notes}}</p>
 
 </form>
 
-{{link-to "Edit Recipe" "recipes.edit" model}}
+<h1 class="edit-recipe">{{link-to "Edit Recipe" "recipes.edit" model}}</h1>
 
 
 {{outlet}}
