@@ -32,6 +32,8 @@ h1 {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .recipe-listing-container {
@@ -44,7 +46,7 @@ ul {
   @include omega(3n);
   position: relative;
   margin-bottom: 18px;
-  border-radius: 10px;
+  border-radius: 5px;
   background: #fff;
   padding: 10px;
   height: 100%;
@@ -143,4 +145,57 @@ button {
 
 :-ms-input-placeholder { /* Internet Explorer 10+ */
   color: #7d9631;
+}
+
+.recipe-image {
+  border-radius: 5px;
+}
+
+.recipe-info-headers {
+  margin: 0;
+}
+
+.recipe-info-list-items {
+  display: inline-block;
+  margin: 0px 25px 0px 25px;
+}
+
+.scale-mult {
+  width: 50px;
+}
+
+.step-directions {
+  display: inline-block;
+  width: 35%;
+  vertical-align: top;
+
+  p {
+    margin: 0;
+  }
+}
+
+.step-ing {
+  display: inline-block;
+  width: 35%;
+  vertical-align: top;
+}
+
+.recipe-step-list {
+  display: inline-block;
+}
+
+.step-container {
+  border: 1px solid #7C9431;
+  border-radius: 5px;
+  width: 60%;
+  margin: 10px auto;
+}
+
+.recipe-notes {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.edit-recipe a {
+  color: #7C9431;
 }
