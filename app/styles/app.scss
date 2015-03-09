@@ -126,7 +126,7 @@ button {
 .notes {
   padding: 8px;
   height: 150px;
-  width: 84%;
+  width: 100%;
 }
 
 ::-webkit-input-placeholder {
@@ -198,4 +198,24 @@ button {
 
 .edit-recipe a {
   color: #7C9431;
+}
+
+.ingredient-amount {
+  width: 100%;
+}
+
+.ingredient-unit {
+  width: 100%;
+}
+
+.ingredients-name {
+  width: 85%;
+}
+
+.directions {
+  width: 100%;
+}
+
+.add-step {
+  width: 100%;
 }
