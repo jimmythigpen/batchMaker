@@ -44,7 +44,7 @@
     <div>
       {{input class="ingredient-amount" placeholder="Amount" value=ingredient.amount}}
       <div>
-        {{view "select" content=ingredientsUnit value=ingredient.unit prompt="Please select unit of measurement"}}
+        {{view "select" class="ingredient-unit" content=ingredientsUnit value=ingredient.unit prompt="Please select unit of measurement"}}
       </div>
       <div>
         {{input class="ingredients-name" placeholder="Ingredient" value=ingredient.name}}
@@ -55,7 +55,7 @@
     {{/each}}
 
       {{textarea class="directions" placeholder="Directions" value=step.model.directions}}
-      <button {{action "addStep"}}> Add another step </button>
+      <button class="add-step"{{action "addStep"}}> Add another step </button>
 
     {{/each}}
 
