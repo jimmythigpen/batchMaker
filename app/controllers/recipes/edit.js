@@ -23,6 +23,9 @@ export default Ember.Controller.extend({
       }).done(function(){
         _this.transitionToRoute('recipes.index');
       });
+    },
+    addStep: function(){
+      this.get('model.steps').addObject({ingredients: [{}]});
     }
-  },
+  }
 });
