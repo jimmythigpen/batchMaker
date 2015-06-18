@@ -11,5 +11,6 @@
 * SASS
 * Javascript
 * Ember.js
+* Parse
 * jQuery
 * Underscore.js
